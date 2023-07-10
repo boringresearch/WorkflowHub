@@ -1,0 +1,27 @@
+# .github/workflows/check_entries.yaml
+name: Check Entries Matches
+
+on:
+  workflow_call:
+    inputs:
+      python-version:
+        required: true
+        type: string
+      script-path:
+        required: true
+        type: string
+
+jobs:
+  check_entries:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ inputs.python-version }}
+
+      - name: Check entries
+        run: python ${{ inputs.script-path }}

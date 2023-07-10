@@ -1,0 +1,1 @@
+This idea is from [ChatGPT](https://chat.openai.com/share/bb2c4378-c9fb-415f-a3aa-306b3b0e1483).
